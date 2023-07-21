@@ -7,14 +7,6 @@ import 'package:weather_app/provider/weather_provider.dart';
 class SearchPage extends StatelessWidget {
 
 
-  Color winterScreen=Color(0xff082654);
-
-  Color winterScreen2=Color(0xff0C43AC);
-
-  Color sunnyScreen=Color(0xff2DAFDD);
-
-  Color sunnyScreen2=Color(0xff30BCE5);
-
   LinearGradient rainingGradient = LinearGradient(
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
@@ -43,9 +35,7 @@ class SearchPage extends StatelessWidget {
 
 
     return Scaffold(
-      body:
-      weatherData != null ?                  // <<------------------------------
-      Container(
+      body: Container(
           padding: EdgeInsets.only(
               top: MediaQuery.of(context).padding.top,
           right: 8,
@@ -57,7 +47,7 @@ class SearchPage extends StatelessWidget {
           children: [
          Row(
            children: [
-             IconButton(
+           const  IconButton(
                icon: Icon(
                    Icons.location_on_outlined,
                size: 35,
@@ -75,7 +65,7 @@ class SearchPage extends StatelessWidget {
                ),
              ),
              IconButton(
-               icon: Icon(
+               icon: const Icon(
                  Icons.search,
                  size: 30,
                  color: Colors.white,),
@@ -117,7 +107,7 @@ class SearchPage extends StatelessWidget {
               children: [
                 Text(
                   '${weatherData!.temperature.toInt()}°c ',
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontSize: 70,
                       color: Colors.white,
                   ),
@@ -130,7 +120,7 @@ class SearchPage extends StatelessWidget {
               children: [
                 Text(
                   weatherData!.weatherState,
-                  style: TextStyle(
+                  style:const TextStyle(
                     fontSize: 30,
                     color: Colors.white,
                   ),
@@ -141,11 +131,11 @@ class SearchPage extends StatelessWidget {
             Row(
               children: [
                 Container(
-                  margin: EdgeInsets.symmetric(
+                  margin:const EdgeInsets.symmetric(
                     vertical: 10,
                     horizontal: 10
                   ),
-                  padding: EdgeInsets.all(10),
+                  padding:const EdgeInsets.all(10),
                   height: screenHeight*0.1,
                   width: screenWidth*0.9,
                   decoration: BoxDecoration(
@@ -159,7 +149,7 @@ class SearchPage extends StatelessWidget {
                         children: [
                           Row(
                             children: [
-                              Padding(
+                               Padding(
                                 padding: const EdgeInsets.only(
                                   top: 10
                                 ),
@@ -170,7 +160,7 @@ class SearchPage extends StatelessWidget {
                                   color: Colors.black,
                                 ),
                               ),
-                              Text(
+                                Text(
                                 '  Max Temp',
                                 style: TextStyle(
                                   fontSize: 18,
@@ -394,10 +384,6 @@ class SearchPage extends StatelessWidget {
           ],
         )
       )
-
-          :               // <<-----------------
-      Container()
-
 
     );
   }
