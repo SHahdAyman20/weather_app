@@ -7,14 +7,6 @@ import 'package:weather_app/provider/weather_provider.dart';
 class SearchPage extends StatelessWidget {
 
 
-  Color winterScreen=Color(0xff082654);
-
-  Color winterScreen2=Color(0xff0C43AC);
-
-  Color sunnyScreen=Color(0xff2DAFDD);
-
-  Color sunnyScreen2=Color(0xff30BCE5);
-
   LinearGradient rainingGradient = LinearGradient(
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
